@@ -12,8 +12,8 @@ A React application that features a user information form and an interactive map
 
 ## Demo
 
-![Form Page](https://via.placeholder.com/600x300?text=Form+Page)
-![Map Page](https://via.placeholder.com/600x300?text=Map+Page)
+![Form Page]ottermap-react-application/Screenshot (469).png
+![Map Page]ottermap-react-application/Screenshot (470).png
 
 ## Installation
 
