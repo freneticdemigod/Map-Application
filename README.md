@@ -10,11 +10,6 @@ A React application that features a user information form and an interactive map
 - Polygon drawing, editing, and deletion capabilities
 - Responsive design
 
-## Demo
-
-![Form Page]ottermap-react-application/Screenshot (469).png
-![Map Page]ottermap-react-application/Screenshot (470).png
-
 ## Installation
 
 To get started with this application, follow these steps:
