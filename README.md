@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# React Map Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application that features a user information form and an interactive map with polygon drawing capabilities using OpenLayers.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Two-page application with routing
+- User information collection form with validation
+- Interactive map powered by OpenLayers
+- Polygon drawing, editing, and deletion capabilities
+- Responsive design
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Form Page](https://via.placeholder.com/600x300?text=Form+Page)
+![Map Page](https://via.placeholder.com/600x300?text=Map+Page)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+To get started with this application, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/react-map-application.git
 
-### `npm run build`
+# Navigate to the project directory
+cd react-map-application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Install dependencies
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Start the development server
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application will open in your default browser at `http://localhost:3000`.
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Form Page
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. The application starts with a form page at the root URL (`/`).
+2. Enter your first name and a 10-digit mobile number.
+3. The form validates that:
+   - First name is not empty
+   - Mobile number is exactly 10 digits
+4. Click the "Continue to Map" button to proceed to the map page.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Map Page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. After submitting the form, you'll be redirected to the map page (`/map`).
+2. Your name will appear in the header at the center of the page.
+3. The main section displays an interactive map powered by OpenLayers.
+4. Use the toolbar above the map for the following operations:
+   - **Draw Polygon**: Click this button to start drawing a polygon. Click on the map to add vertices, and double-click to complete the polygon.
+   - **Delete Selected**: First click on a polygon to select it (it will highlight in red), then click this button to delete it.
+   - **Clear All**: Click this button to remove all polygons from the map.
+5. You can also edit existing polygons by clicking and dragging the vertices.
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+src/
+├── App.js                # Main app with routing
+├── index.js              # Entry point
+├── components/
+│   ├── Header.js         # Header component 
+│   ├── SearchForm.js     # Form component for the first route
+│   └── MapPage.js        # Map component with OpenLayers
+├── context/
+│   └── UserContext.js    # Context for user data
+└── styles/
+    ├── Header.css        # Styling for header
+    ├── SearchForm.css    # Styling for search form
+    ├── MapPage.css       # Styling for map page
+    └── index.css         # Global styles
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies Used
 
-### Code Splitting
+- React
+- React Router
+- OpenLayers
+- Context API for state management
+- CSS for styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Browser Compatibility
 
-### Analyzing the Bundle Size
+This application has been tested and works on:
+- Google Chrome (latest)
+- Mozilla Firefox (latest)
+- Microsoft Edge (latest)
+- Safari (latest)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](LICENSE)
